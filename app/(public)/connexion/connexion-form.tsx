@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -79,12 +78,10 @@ export function ConnexionForm() {
           error={form.formState.errors.password?.message}
           {...form.register("password")}
         />
-        <Link
-          href="/mot-de-passe-oublie"
-          className="justify-self-end text-sm text-primary underline-offset-4 hover:underline"
-        >
-          Mot de passe oublié ?
-        </Link>
+        {/* Réinitialisation par email en attente (docs/03, « Mot de passe oublié »). */}
+        <p className="justify-self-end text-sm text-muted-foreground">
+          Mot de passe oublié ? Contactez AlloProf.
+        </p>
       </div>
 
       <Button type="submit" size="lg" className="h-11 w-full text-base" disabled={login.isPending}>

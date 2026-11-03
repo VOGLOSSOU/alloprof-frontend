@@ -230,6 +230,14 @@ export interface Recap {
   marge: number;
 }
 
+/** Lien d'activation d'un prof : aucun email n'est envoyé, l'admin transmet `message` par WhatsApp. */
+export interface Invitation {
+  lien: string;
+  expireLe: string;
+  /** Texte prêt à coller dans WhatsApp, lien compris */
+  message: string;
+}
+
 export interface Paginated<T> {
   data: T[];
   total: number;
