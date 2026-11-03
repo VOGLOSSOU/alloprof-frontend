@@ -33,11 +33,8 @@ export function setToken(token: string | null) {
 }
 
 // Appelé sur un 401 d'une requête authentifiée. L'AuthProvider le remplace
-// pour vider la session et rediriger proprement vers /connexion.
-let onUnauthorized: () => void = () => {
-  setToken(null);
-  window.location.href = "/connexion";
-};
+// pour vider la session ; RequireRole renvoie ensuite vers /connexion.
+let onUnauthorized: () => void = () => setToken(null);
 
 export function setUnauthorizedHandler(handler: () => void) {
   onUnauthorized = handler;

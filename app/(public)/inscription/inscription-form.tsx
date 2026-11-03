@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,9 +37,14 @@ const FIELDS = ["prenom", "nom", "email", "telephone", "password", "adresse"] as
 export function InscriptionForm() {
   const router = useRouter();
   const { status, user, setSession } = useAuth();
+  // Vrai dès que l'inscription réussit : la redirection est alors faite par onSuccess.
+  const justRegistered = useRef(false);
 
+  // Déjà connecté en arrivant sur la page : direction l'espace du rôle.
   useEffect(() => {
-    if (status === "authenticated" && user) router.replace(HOME_BY_ROLE[user.role]);
+    if (status === "authenticated" && user && !justRegistered.current) {
+      router.replace(HOME_BY_ROLE[user.role]);
+    }
   }, [status, user, router]);
 
   const form = useForm<Input, unknown, Output>({
@@ -52,6 +57,7 @@ export function InscriptionForm() {
     mutationFn: (values: Output) => api.post<AuthResponse>("/auth/register", values),
     meta: { silent: true },
     onSuccess: (session) => {
+      justRegistered.current = true;
       setSession(session);
       toast.success("Bienvenue sur AlloProf !");
       // Le but de l'inscription est de faire une demande.
