@@ -1,6 +1,7 @@
 // Client HTTP unique vers l'API AlloProf (voir docs/01-BRIEF-FRONTEND.md, section 4).
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+// Toujours fournie par l'environnement (voir .env.example), jamais en dur.
+const API_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/+$/, "");
 const TOKEN_KEY = "alloprof_token";
 
 export type ApiErrorDetails = { champ: string; message: string }[] | string | undefined;
@@ -49,6 +50,9 @@ interface RequestOptions {
 }
 
 function buildUrl(path: string, query?: Query) {
+  if (!API_URL) {
+    throw new ApiError(0, "Configuration manquante : NEXT_PUBLIC_API_URL n'est pas définie (voir .env.example).");
+  }
   const url = new URL(API_URL + path);
   if (query) {
     for (const [key, value] of Object.entries(query)) {
@@ -66,9 +70,11 @@ async function request<T>(method: string, path: string, options: RequestOptions 
   if (options.body !== undefined) headers["Content-Type"] = "application/json";
   if (token) headers.Authorization = `Bearer ${token}`;
 
+  // Hors du try : une configuration manquante ne doit pas passer pour une coupure réseau.
+  const url = buildUrl(path, options.query);
   let response: Response;
   try {
-    response = await fetch(buildUrl(path, options.query), {
+    response = await fetch(url, {
       method,
       headers,
       body: options.body !== undefined ? JSON.stringify(options.body) : undefined,
