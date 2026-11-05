@@ -35,6 +35,8 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-ambre: var(--ambre);
+  --color-ambre-foreground: var(--ambre-foreground);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -49,38 +51,41 @@
 }
 
 :root {
-  --background: oklch(0.984 0.003 247.858);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.546 0.245 262.881);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Identité AlloProf : référence dans docs/identite-visuelle/README.md */
+  --background: #FAF8F3;
+  --foreground: #14292B;
+  --card: #FFFFFF;
+  --card-foreground: #14292B;
+  --popover: #FFFFFF;
+  --popover-foreground: #14292B;
+  --primary: #0F5C63;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F2EFE7;
+  --secondary-foreground: #14292B;
+  --muted: #F2EFE7;
+  --muted-foreground: #566769;
+  --accent: #E3EFEF;
+  --accent-foreground: #0F5C63;
+  --ambre: #F2A93B;
+  --ambre-foreground: #14292B;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.623 0.214 259.815);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --border: #E5E1D8;
+  --input: #D9D5CA;
+  --ring: #0F5C63;
+  --chart-1: #0F5C63;
+  --chart-2: #F2A93B;
+  --chart-3: #4F9CA3;
+  --chart-4: #566769;
+  --chart-5: #14292B;
   --radius: 0.625rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.546 0.245 262.881);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0.014 254.604);
-  --sidebar-accent-foreground: oklch(0.488 0.243 264.376);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #14292B;
+  --sidebar-primary: #0F5C63;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E3EFEF;
+  --sidebar-accent-foreground: #0F5C63;
+  --sidebar-border: #E5E1D8;
+  --sidebar-ring: #0F5C63;
 }
 
 .dark {

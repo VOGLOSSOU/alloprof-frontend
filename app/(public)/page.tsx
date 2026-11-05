@@ -55,7 +55,7 @@ export default function AccueilPage() {
           {ETAPES.map(({ icon: Icon, titre, texte }, index) => (
             <div key={titre} className="rounded-xl border bg-card p-5">
               <div className="mb-3 flex items-center gap-3">
-                <span className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-ambre/20 text-primary">
                   <Icon className="size-5" />
                 </span>
                 <span className="text-sm font-medium text-muted-foreground">Étape {index + 1}</span>
