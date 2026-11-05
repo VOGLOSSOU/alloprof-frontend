@@ -200,7 +200,7 @@ export function DemandeDetail() {
   const query = useClientDemande(id);
 
   const retour = (
-    <Button asChild variant="ghost" className="-ml-2.5 mb-2 self-start">
+    <Button asChild variant="ghost" className="-ml-2.5 mb-2 justify-self-start">
       <Link href="/client/demandes">
         <ArrowLeftIcon />
         Mes demandes

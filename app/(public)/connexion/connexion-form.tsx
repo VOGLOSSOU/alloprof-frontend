@@ -71,18 +71,12 @@ export function ConnexionForm() {
         {...form.register("identifiant")}
       />
 
-      <div className="grid gap-1.5">
-        <PasswordField
-          label="Mot de passe"
-          autoComplete="current-password"
-          error={form.formState.errors.password?.message}
-          {...form.register("password")}
-        />
-        {/* Réinitialisation par email en attente (docs/03, « Mot de passe oublié »). */}
-        <p className="justify-self-end text-sm text-muted-foreground">
-          Mot de passe oublié ? Contactez AlloProf.
-        </p>
-      </div>
+      <PasswordField
+        label="Mot de passe"
+        autoComplete="current-password"
+        error={form.formState.errors.password?.message}
+        {...form.register("password")}
+      />
 
       <Button type="submit" size="lg" className="h-11 w-full text-base" disabled={login.isPending}>
         {login.isPending && <Loader2Icon className="animate-spin" />}

@@ -15,7 +15,7 @@ export default function ConnexionPage() {
         <>
           Pas encore de compte ?{" "}
           <Link href="/inscription" className="font-medium text-primary underline-offset-4 hover:underline">
-            Trouver un professeur
+            Créer un compte
           </Link>
         </>
       }
