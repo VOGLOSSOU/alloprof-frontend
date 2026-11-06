@@ -3,7 +3,7 @@
 La référence pour tout ce qui porte la marque AlloProf : applications, affiches, maquettes, réseaux sociaux.
 
 - Couleurs en version machine : [`tokens.json`](tokens.json)
-- Logo : dossier [`logos/`](logos/)
+- Logo : [`logos/symbole.png`](logos/symbole.png)
 - Dans le frontend, ces valeurs vivent dans `app/globals.css`. Si une couleur change, mettre à jour les deux endroits.
 
 ## Couleurs
@@ -42,20 +42,23 @@ La référence pour tout ce qui porte la marque AlloProf : applications, affiche
 
 Le logo est un **symbole carré, sans écriture** : une toque de professeur au-dessus d'un combiné de téléphone. Il réunit le prof et l'appel, et l'ensemble évoque un visage souriant coiffé d'une toque.
 
-| Fichier (`logos/`) | Usage |
-|---|---|
-| `symbole.svg`, `symbole.png` | Usage principal : site, favicon, photo de profil, affiches sur fond clair |
-| `symbole-sur-petrole.svg`, `symbole-sur-petrole.png` | Fonds pétrole |
-| `apercu.png` | Vue d'ensemble |
-| `logo.svg`, `logo-sur-petrole.svg`, `logo.png`, `logo-sur-petrole.png` | Ancien logo en toutes lettres, plus utilisé sur le site |
+**Fichier source unique : `logos/symbole.png`** (1024 x 1024 px, coins transparents). Toutes les icônes du site en sont tirées :
 
-- Préférer le SVG. Les PNG font 1024 px, avec un fond transparent aux coins.
+| Fichier | Usage |
+|---|---|
+| `public/symbole.png` | Logo affiché sur le site |
+| `app/favicon.ico`, `app/icon.png` | Favicon |
+| `app/apple-icon.png` | Écran d'accueil iPhone (fond plein) |
+| `public/icons/icon-192.png`, `icon-512.png`, `icon-maskable-512.png` | Écran d'accueil Android |
+| `app/opengraph-image.png` | Aperçu au partage d'un lien (1200 x 630 px) |
+
 - Dans l'en-tête du site, le symbole est suivi du nom « AlloProf » en texte (Geist semi-gras).
 - Ne pas changer les couleurs, ne pas déformer, et laisser autour du symbole un espace au moins égal à un quart de sa largeur.
+- Le carré étant pétrole, l'utiliser sur fond clair : sur un fond pétrole, il disparaîtrait.
 
 ## Typographie
 
-- **Geist** pour tout le texte, **Geist Mono** pour les codes et les chiffres alignés (ex. le code du jour). **Sora Bold** ne sert qu'à l'ancien logo en toutes lettres. Toutes sont gratuites (licence OFL), disponibles sur Google Fonts.
+- **Geist** pour tout le texte, **Geist Mono** pour les codes et les chiffres alignés (ex. le code du jour). Les deux sont gratuites (licence OFL), disponibles sur Google Fonts.
 - Titres en semi-gras, texte courant en normal.
 
 ## Formes

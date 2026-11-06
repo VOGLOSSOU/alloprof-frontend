@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="512" height="512" role="img" aria-label="AlloProf">
-<title>AlloProf</title>
-<rect width="96" height="96" rx="22" fill="#0F5C63"/>
-<path fill="#FFFFFF" d="M48 13 79 26.500 48 40 17 26.500z"/>
-<rect x="75.500" y="27" width="3.500" height="14" rx="1.750" fill="#FFFFFF"/>
-<path fill="#F2A93B" transform="translate(48 66) rotate(180) scale(35)" d="M-.85 .12C-.85 -.55 .85 -.55 .85 .12L.85 .32Q.85 .44 .72 .44L.38 .44Q.26 .44 .26 .32L.26 .12C.1 .02 -.1 .02 -.26 .12L-.26 .32Q-.26 .44 -.38 .44L-.72 .44Q-.85 .44 -.85 .32Z"/>
-</svg>
