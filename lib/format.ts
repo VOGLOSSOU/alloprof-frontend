@@ -9,13 +9,13 @@ const montantFormatter = new Intl.NumberFormat("fr-FR", { maximumFractionDigits:
 
 /** "5000.00" ou 5000 → "5 000 FCFA" */
 export function formatMontant(value: Montant | null | undefined) {
-  if (value === null || value === undefined || value === "") return "—";
+  if (value === null || value === undefined || value === "") return "-";
   return `${montantFormatter.format(Number(value))} FCFA`;
 }
 
 /** Date métier "AAAA-MM-JJ" ou horodatage ISO → "3 nov. 2026" (ou le motif donné). */
 export function formatDate(value: string | null | undefined, pattern = "d MMM yyyy") {
-  if (!value) return "—";
+  if (!value) return "-";
   return format(parseISO(value), pattern, { locale: fr });
 }
 
@@ -26,14 +26,14 @@ export function formatDateHeure(value: string | null | undefined) {
 
 /** "16:00:00" → "16h00" */
 export function formatHeure(value: string | null | undefined) {
-  if (!value) return "—";
+  if (!value) return "-";
   const [h, m] = value.split(":");
   return `${h}h${m}`;
 }
 
-/** { jourSemaine: 1, heureDebut: "16:00:00", heureFin: "18:00:00" } → "Lundi 16h00 – 18h00" */
+/** { jourSemaine: 1, heureDebut: "16:00:00", heureFin: "18:00:00" } → "Lundi 16h00 - 18h00" */
 export function formatCreneau(creneau: Pick<Creneau, "jourSemaine" | "heureDebut" | "heureFin">) {
-  return `${JOURS_SEMAINE[creneau.jourSemaine]} ${formatHeure(creneau.heureDebut)} – ${formatHeure(creneau.heureFin)}`;
+  return `${JOURS_SEMAINE[creneau.jourSemaine]} ${formatHeure(creneau.heureDebut)} - ${formatHeure(creneau.heureFin)}`;
 }
 
 /** Créneaux triés par jour puis heure. */

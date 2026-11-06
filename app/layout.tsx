@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AlloProf — Professeurs de maison au Bénin",
+    default: "AlloProf : professeurs de maison au Bénin",
     template: "%s · AlloProf",
   },
   description:

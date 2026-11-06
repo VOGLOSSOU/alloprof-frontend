@@ -177,11 +177,11 @@ export function NouvelleDemandeForm() {
         : null;
 
   const recap: { label: string; valeur: string; etape: number }[] = [
-    { label: "Pour qui", valeur: values.typeBeneficiaire ? TYPE_BENEFICIAIRE[values.typeBeneficiaire] : "—", etape: 0 },
-    { label: "Ville", valeur: [ville?.nom, values.quartier].filter(Boolean).join(", ") || "—", etape: 1 },
-    { label: "Niveau", valeur: niveau?.libelle ?? "—", etape: 2 },
-    { label: "Matières", valeur: matieres.map((m) => m.libelle).join(", ") || "—", etape: 2 },
-    { label: "Votre besoin", valeur: values.description || "—", etape: 3 },
+    { label: "Pour qui", valeur: values.typeBeneficiaire ? TYPE_BENEFICIAIRE[values.typeBeneficiaire] : "-", etape: 0 },
+    { label: "Ville", valeur: [ville?.nom, values.quartier].filter(Boolean).join(", ") || "-", etape: 1 },
+    { label: "Niveau", valeur: niveau?.libelle ?? "-", etape: 2 },
+    { label: "Matières", valeur: matieres.map((m) => m.libelle).join(", ") || "-", etape: 2 },
+    { label: "Votre besoin", valeur: values.description || "-", etape: 3 },
     {
       label: "Jours souhaités",
       valeur: joursSouhaites.map(labelJourSouhaite).join(", ") || "Pas de préférence",

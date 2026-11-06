@@ -54,3 +54,7 @@ Un carré pétrole aux coins arrondis, avec une toque de diplômé ambre, suivi 
 ## Formes
 
 Coins arrondis (rayon de base 10 px, cartes un peu plus), fonds clairs, peu d'images : la plupart des utilisateurs sont sur téléphone, parfois avec une connexion lente.
+
+## Écriture
+
+Pas de tiret long (`—`, `–`) dans les textes visibles : utiliser `-` ou `:`.

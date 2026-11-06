@@ -161,7 +161,7 @@ Cartes (`GET /client/demandes`, paginée, filtre par statut en onglets) : matiè
 - **Frise d'avancement** : Envoyée, puis Recherche en cours, puis Professeur trouvé (cas `ANNULEE` et `REJETEE` à part).
 - Si une assignation `ACTIVE` existe (`assignations[0]` avec `statut === 'ACTIVE'`), une carte **« Votre professeur »** affiche :
   - le nom du prof, son téléphone (bouton appeler `tel:` et bouton WhatsApp) ;
-  - le planning hebdo (« Lundi 16h00 – 18h00 ») ;
+  - le planning hebdo (« Lundi 16h00 - 18h00 ») ;
   - le tarif (`tarifClient` et unité) et la date de début.
 - Bouton « Annuler la demande » visible seulement si le statut est `EN_ATTENTE` ou `EN_RECHERCHE`, avec une boîte de confirmation, puis `POST /client/demandes/:id/annuler`.
 
