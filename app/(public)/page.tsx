@@ -146,7 +146,7 @@ export default function AccueilPage() {
               <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
                 <Icon className="size-5" aria-hidden="true" />
               </span>
-              <div className="grid gap-1">
+              <div className="grid content-start gap-1">
                 <h2 className="font-semibold">{titre}</h2>
                 <p className="text-sm text-muted-foreground">{texte}</p>
               </div>
@@ -273,7 +273,7 @@ export default function AccueilPage() {
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
-                <div className="grid gap-1">
+                <div className="grid content-start gap-1">
                   <h3 className="text-lg font-semibold">{titre}</h3>
                   <p className="text-muted-foreground">{texte}</p>
                 </div>

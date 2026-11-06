@@ -98,6 +98,11 @@ Cliquer sur une notification la marque comme lue (`POST /notifications/:id/lire`
   3. « Suivez chaque cours avec un code de présence ».
 - Afficher les villes couvertes (`GET /referentiels`) et deux boutons : « Trouver un professeur » (vers `/inscription`) et « Se connecter ».
 - Rendu serveur pour le référencement.
+- Photos dans `public/images/` : provenance et limites dans `identite-visuelle/CREDITS-PHOTOS.md`.
+
+### `/a-propos`
+- Page vitrine liée depuis la section « À propos » de l'accueil : présentation, façon de travailler, villes couvertes, questions fréquentes.
+- Rendu serveur. Ne publier que des faits vérifiés : pas de chiffres, d'avis ou d'équipe inventés.
 
 ### `/inscription`
 - Champs : nom, prénom, email, téléphone, mot de passe, adresse (optionnelle).

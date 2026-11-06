@@ -78,6 +78,7 @@ Un seul module (ex. `lib/api.ts`) qui :
 app/
   (public)/
     page.tsx                      accueil
+    a-propos/page.tsx             page À propos
     connexion/page.tsx
     inscription/page.tsx
     invitation/page.tsx           ?token=  (activation prof)
