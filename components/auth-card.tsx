@@ -1,7 +1,7 @@
-import { Logo } from "@/components/logo";
+import { SiteShell } from "@/components/marketing/site-shell";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-/** Mise en page des écrans publics d'authentification (connexion, inscription, mot de passe...). */
+/** Mise en page des écrans publics d'authentification (connexion, inscription...). */
 export function AuthCard({
   title,
   description,
@@ -14,16 +14,17 @@ export function AuthCard({
   footer?: React.ReactNode;
 }) {
   return (
-    <main className="flex min-h-svh flex-col items-center px-4 py-8 sm:justify-center">
-      <Logo className="mb-6" />
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-xl">{title}</CardTitle>
-          {description && <CardDescription>{description}</CardDescription>}
-        </CardHeader>
-        <CardContent>{children}</CardContent>
-      </Card>
-      {footer && <div className="mt-6 text-center text-sm text-muted-foreground">{footer}</div>}
-    </main>
+    <SiteShell>
+      <div className="flex flex-col items-center px-4 py-10 sm:py-16">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {description && <CardDescription>{description}</CardDescription>}
+          </CardHeader>
+          <CardContent>{children}</CardContent>
+        </Card>
+        {footer && <div className="mt-6 text-center text-sm text-muted-foreground">{footer}</div>}
+      </div>
+    </SiteShell>
   );
 }
