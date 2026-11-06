@@ -3,7 +3,7 @@
 La référence pour tout ce qui porte la marque AlloProf : applications, affiches, maquettes, réseaux sociaux.
 
 - Couleurs en version machine : [`tokens.json`](tokens.json)
-- Logo : [`logo-icone.svg`](logo-icone.svg)
+- Logo : dossier [`logos/`](logos/)
 - Dans le frontend, ces valeurs vivent dans `app/globals.css`. Si une couleur change, mettre à jour les deux endroits.
 
 ## Couleurs
@@ -40,15 +40,22 @@ La référence pour tout ce qui porte la marque AlloProf : applications, affiche
 
 ## Logo
 
-Un carré pétrole aux coins arrondis, avec une toque de diplômé ambre, suivi du mot « AlloProf » en Geist semi-gras.
+Le logo est un **symbole carré, sans écriture** : une toque de professeur au-dessus d'un combiné de téléphone. Il réunit le prof et l'appel, et l'ensemble évoque un visage souriant coiffé d'une toque.
 
-- Le fichier `logo-icone.svg` contient uniquement l'icône. C'est aussi le favicon de l'application.
-- Ne pas changer ses couleurs, ni le déformer.
-- Ce logo est provisoire : il utilise l'icône « graduation-cap » de Lucide (licence ISC), qui n'est pas exclusive à AlloProf. Prévoir un logo dédié pour un dépôt de marque.
+| Fichier (`logos/`) | Usage |
+|---|---|
+| `symbole.svg`, `symbole.png` | Usage principal : site, favicon, photo de profil, affiches sur fond clair |
+| `symbole-sur-petrole.svg`, `symbole-sur-petrole.png` | Fonds pétrole |
+| `apercu.png` | Vue d'ensemble |
+| `logo.svg`, `logo-sur-petrole.svg`, `logo.png`, `logo-sur-petrole.png` | Ancien logo en toutes lettres, plus utilisé sur le site |
+
+- Préférer le SVG. Les PNG font 1024 px, avec un fond transparent aux coins.
+- Dans l'en-tête du site, le symbole est suivi du nom « AlloProf » en texte (Geist semi-gras).
+- Ne pas changer les couleurs, ne pas déformer, et laisser autour du symbole un espace au moins égal à un quart de sa largeur.
 
 ## Typographie
 
-- **Geist** pour tout le texte, **Geist Mono** pour les codes et les chiffres alignés (ex. le code du jour). Les deux sont gratuites (licence OFL), disponibles sur Google Fonts.
+- **Geist** pour tout le texte, **Geist Mono** pour les codes et les chiffres alignés (ex. le code du jour). **Sora Bold** ne sert qu'à l'ancien logo en toutes lettres. Toutes sont gratuites (licence OFL), disponibles sur Google Fonts.
 - Titres en semi-gras, texte courant en normal.
 
 ## Formes
