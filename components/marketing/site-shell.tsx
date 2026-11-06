@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "@/components/logo";
+import { Logo, Symbole } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
 const LIENS = [
@@ -86,11 +86,16 @@ export function CtaFinal() {
   return (
     <section className="bg-primary text-primary-foreground">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
-        <div className="grid gap-2">
-          <h2 className="max-w-xl text-2xl font-semibold tracking-tight sm:text-3xl">
-            Dites-nous ce qu&apos;il vous faut, nous cherchons pour vous.
-          </h2>
-          <p className="text-primary-foreground/80">La demande se fait en quelques minutes, depuis votre téléphone.</p>
+        <div className="flex items-center gap-5">
+          <span className="hidden rounded-3xl bg-white p-2 sm:block">
+            <Symbole taille={64} />
+          </span>
+          <div className="grid gap-2">
+            <h2 className="max-w-xl text-2xl font-semibold tracking-tight sm:text-3xl">
+              Dites-nous ce qu&apos;il vous faut, nous cherchons pour vous.
+            </h2>
+            <p className="text-primary-foreground/80">La demande se fait en quelques minutes, depuis votre téléphone.</p>
+          </div>
         </div>
         <Button asChild size="lg" variant="secondary" className="h-12 px-6 text-base">
           <Link href="/inscription">Trouver un professeur</Link>

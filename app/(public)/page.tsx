@@ -14,6 +14,7 @@ import {
   UserRoundIcon,
   UserSearchIcon,
 } from "lucide-react";
+import { Symbole } from "@/components/logo";
 import { CtaFinal, SiteShell } from "@/components/marketing/site-shell";
 import { VillesCouvertes } from "@/components/marketing/villes-couvertes";
 import { Button } from "@/components/ui/button";
@@ -78,7 +79,10 @@ const PUBLICS = [
 function CarteCode({ className }: { className?: string }) {
   return (
     <div className={`w-64 rounded-2xl border bg-card p-4 text-card-foreground shadow-xl ${className ?? ""}`}>
-      <p className="text-xs font-medium text-muted-foreground">Code du jour (exemple)</p>
+      <p className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
+        <Symbole taille={20} />
+        Code du jour (exemple)
+      </p>
       <p className="mt-1 font-mono text-3xl font-semibold tracking-[0.15em] text-primary">482 913</p>
       <p className="mt-2 flex items-center gap-1.5 text-xs font-medium text-green-700">
         <CircleCheckIcon className="size-3.5" aria-hidden="true" />
@@ -248,6 +252,7 @@ export default function AccueilPage() {
           className="aspect-[3/2] w-full rounded-3xl object-cover"
         />
         <div>
+          <Symbole taille={56} className="mb-4" />
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">À propos d&apos;AlloProf</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Trouver un bon professeur de maison passe souvent par le bouche-à-oreille, et ensuite il est difficile de

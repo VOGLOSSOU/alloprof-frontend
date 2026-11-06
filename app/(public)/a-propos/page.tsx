@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ChevronDownIcon, ClipboardCheckIcon, KeyRoundIcon, UsersRoundIcon, WalletCardsIcon } from "lucide-react";
+import { Symbole } from "@/components/logo";
 import { CtaFinal, SiteShell } from "@/components/marketing/site-shell";
 import { VillesCouvertes } from "@/components/marketing/villes-couvertes";
 import elevesLecture from "@/public/images/eleves-lecture.jpg";
@@ -95,7 +96,10 @@ export default function AProposPage() {
 
       <section className="border-y bg-card">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Notre façon de faire</h2>
+          <div className="flex items-center gap-4">
+            <Symbole taille={48} />
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Notre façon de faire</h2>
+          </div>
           <ul className="mt-10 grid gap-8 md:grid-cols-2">
             {PRINCIPES.map(({ icon: Icon, titre, texte }) => (
               <li key={titre} className="flex gap-4">
